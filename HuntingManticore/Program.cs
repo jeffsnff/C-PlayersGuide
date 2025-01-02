@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.NetworkInformation;
 
 namespace HuntingManticore
 {
@@ -8,9 +9,10 @@ namespace HuntingManticore
       int cityHealth = 15;
       int manticoreHealth = 10;
       int manticoreRange = 0;
+      int cannonDamage = 1;
       
 
-      // This could be a function
+      // Set Range of Manicore
       while(true){
         int minRange = 0;
         int maxRange = 100;
@@ -21,6 +23,16 @@ namespace HuntingManticore
         }
         break;
       }
+
+      // Display Status
+      Status(round, cityHealth, cannonDamage);
+
+    }
+
+    public static void Status(int round, int cityHealth, int cannonDamage){
+      Console.WriteLine("-------------------------------------------------------------------------------------------------");
+      Console.Write($"STATUS: Round: {round} City: {cityHealth}/15 Manticore: {10}/10");
+      Console.Write($"This cannon is expected to deal {cannonDamage} damage this round.");
     }
   }
 }
