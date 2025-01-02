@@ -35,8 +35,10 @@ namespace HuntingManticore
 
     public static void Status(int round, int cityHealth, int cannonDamage){
       Console.WriteLine("-------------------------------------------------------------------------------------------------");
-      Console.Write($"STATUS: Round: {round} City: {cityHealth}/15 Manticore: {10}/10");
-      Console.Write($"This cannon is expected to deal {cannonDamage} damage this round.");
+      Console.WriteLine($"STATUS: Round: {round} City: {cityHealth}/15 Manticore: {10}/10");
+      Console.WriteLine($"This cannon is expected to deal {cannonDamage} damage this round.");
+      Console.WriteLine();
+      Console.WriteLine();
     }
   }
 }
