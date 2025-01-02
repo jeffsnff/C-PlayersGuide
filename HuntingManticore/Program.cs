@@ -13,6 +13,13 @@ namespace HuntingManticore
       
 
       // Set Range of Manicore
+      manticoreRange = SetRangeManicore(manticoreRange);
+      // Display Status
+      Status(round, cityHealth, cannonDamage);
+
+    }
+
+    public static int SetRangeManicore(int manticoreRange){
       while(true){
         int minRange = 0;
         int maxRange = 100;
@@ -21,12 +28,9 @@ namespace HuntingManticore
         if(manticoreRange < minRange || manticoreRange > maxRange){
           continue;
         }
-        break;
+        Console.Clear();
+        return manticoreRange;
       }
-
-      // Display Status
-      Status(round, cityHealth, cannonDamage);
-
     }
 
     public static void Status(int round, int cityHealth, int cannonDamage){
