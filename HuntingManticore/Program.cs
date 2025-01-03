@@ -101,12 +101,14 @@ namespace HuntingManticore
     public static void WinnerScreen(){
       Console.Clear();
       SetConsoleSpacing(4);
+      Console.ForegroundColor = ConsoleColor.Green;
       Console.WriteLine("Congratulations! You have destroyed the Manticore!");
       SetConsoleSpacing(4);
     }
     public static void LoserScreen(){
       Console.Clear();
       SetConsoleSpacing(4);
+      Console.ForegroundColor = ConsoleColor.Red;
       Console.WriteLine("The Manticore has destroyed Consola.");
       SetConsoleSpacing(4);
     }
