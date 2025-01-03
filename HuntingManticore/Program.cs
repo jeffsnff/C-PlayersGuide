@@ -1,10 +1,7 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Net;
-using System.Net.NetworkInformation;
 
 namespace HuntingManticore
+
 {
   internal class Program{
     static void Main(string[] args){
