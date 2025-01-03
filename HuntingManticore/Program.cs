@@ -88,7 +88,7 @@ namespace HuntingManticore
     }
     public static int UpdateDamage(int round){
       if(round%3==0 && round%5==0){
-        return 150;
+        return 10;
       }
       if(round%3==0){
         return 5;
