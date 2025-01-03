@@ -15,13 +15,18 @@ namespace HuntingManticore
       // Game Play
       while(manticoreHealth > 0 && cityHealth > 0){
         Status(round, cityHealth, manticoreHealth);
-        manticoreHealth = Attack(manticoreRange, round, manticoreHealth);
-        round++;
+
+        manticoreHealth = CityAttack(manticoreRange, round, manticoreHealth);
+        cityHealth = ManticoreAttack(cityHealth);
+        
         if(manticoreHealth<=0){
           WinnerScreen();
         }
+        if(cityHealth<=0){
+          LoserScreen();
+        }
+        round++;
       }
-      
     }
 
     public static int SetRangeManicore(){
@@ -52,6 +57,22 @@ namespace HuntingManticore
       Console.WriteLine();
       Console.WriteLine();
     }
+    public static int CityAttack(int manticoreRange, int round, int manticoreHealth){
+      int targetRange = TargetRange();
+      if(targetRange !=manticoreRange){
+        if(targetRange > manticoreRange){
+          Console.WriteLine("You overshot the Manticore!");
+        }
+        if(targetRange < manticoreRange){
+          Console.WriteLine("You undershot the Manticore!");
+        }
+        return manticoreHealth;
+      }
+      return CalcHealth(round, manticoreHealth);
+    }
+    public static int ManticoreAttack(int cityHealth){
+      return cityHealth - 1;
+    }
     public static int TargetRange(){
       int targetRange;
       Console.Write("Enter desired cannon range: ");
@@ -64,19 +85,6 @@ namespace HuntingManticore
     }
     public static int CalcHealth(int round, int manticoreHealth){
       return manticoreHealth - UpdateDamage(round);
-    }
-    public static int Attack(int manticoreRange, int round, int manticoreHealth){
-      int targetRange = TargetRange();
-      if(targetRange !=manticoreRange){
-        if(targetRange > manticoreRange){
-          Console.WriteLine("You overshot the Manticore!");
-        }
-        if(targetRange < manticoreRange){
-          Console.WriteLine("You undershot the Manticore!");
-        }
-        return manticoreHealth;
-      }
-      return CalcHealth(round, manticoreHealth);
     }
     public static int UpdateDamage(int round){
       if(round%3==0 && round%5==0){
@@ -94,6 +102,12 @@ namespace HuntingManticore
       Console.Clear();
       SetConsoleSpacing(4);
       Console.WriteLine("Congratulations! You have destroyed the Manticore!");
+      SetConsoleSpacing(4);
+    }
+    public static void LoserScreen(){
+      Console.Clear();
+      SetConsoleSpacing(4);
+      Console.WriteLine("The Manticore has destroyed Consola.");
       SetConsoleSpacing(4);
     }
     public static void SetConsoleSpacing(int spaces){
