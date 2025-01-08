@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuntingManticore", "Hunting
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeLand", "PracticeLand\PracticeLand.csproj", "{FBF07788-4D5F-4791-B934-940B5BE6A56B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCharacter", "RPGCharacter\RPGCharacter.csproj", "{CF10A8A4-60AC-4EE5-B731-EDFBBFCB21BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,9 @@ Global
 		{FBF07788-4D5F-4791-B934-940B5BE6A56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBF07788-4D5F-4791-B934-940B5BE6A56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBF07788-4D5F-4791-B934-940B5BE6A56B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF10A8A4-60AC-4EE5-B731-EDFBBFCB21BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF10A8A4-60AC-4EE5-B731-EDFBBFCB21BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF10A8A4-60AC-4EE5-B731-EDFBBFCB21BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF10A8A4-60AC-4EE5-B731-EDFBBFCB21BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
