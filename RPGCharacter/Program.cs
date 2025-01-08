@@ -7,7 +7,21 @@ namespace RPGCharacter
     static void Main(string[] args)
     {
       Character playerOne = new Character("Paola");
-      Console.WriteLine(playerOne);
-    } 
+      
+      while (true)
+      {
+        Console.WriteLine(playerOne);
+        Console.Write("Enter a number between 1 and 100: ");
+        int userInput = Convert.ToInt32(Console.ReadLine());
+        
+        playerOne.Attack(userInput);
+
+        if (playerOne.Dead())
+        {
+          Console.WriteLine("You have died.");
+          break;
+        }
+      }
+    }
   }
 }
