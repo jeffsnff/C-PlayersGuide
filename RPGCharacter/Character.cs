@@ -30,7 +30,7 @@ namespace RPGCharacter
           this.PlayerAttack(damageDealt);
           mana = mana - ManaUsed(damageDealt);
         }else{
-          // User is attacked 
+          Damage(damageDealt);
         }
     }
     internal void Heal()
@@ -56,7 +56,11 @@ namespace RPGCharacter
       }
       Console.WriteLine("You have healed yourself!");
     }
-
+    internal void Damage(int damageDealt){
+      int monsterDamage = damageDealt*2;
+      this.health = this.health - monsterDamage;
+      Console.WriteLine($"The monster has attached you and dealt {monsterDamage} damage!");
+    }
     internal int ManaUsed(int damageDealt)
     {
       if (damageDealt % 2 == 0)

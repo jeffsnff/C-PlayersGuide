@@ -7,7 +7,7 @@ namespace RPGCharacter
     static void Main(string[] args)
     {
       Character playerOne = new Character("Paola");
-      
+
       while (true)
       {
         Console.WriteLine(playerOne);
