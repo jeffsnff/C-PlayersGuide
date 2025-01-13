@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuntingManticore", "HuntingManticore\HuntingManticore.csproj", "{546A5020-5B6F-4934-807C-B012504EC0DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeLand", "PracticeLand\PracticeLand.csproj", "{FBF07788-4D5F-4791-B934-940B5BE6A56B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCharacter", "RPGCharacter\RPGCharacter.csproj", "{CF10A8A4-60AC-4EE5-B731-EDFBBFCB21BB}"
 EndProject
 Global
