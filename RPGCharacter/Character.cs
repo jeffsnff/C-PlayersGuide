@@ -33,7 +33,7 @@ namespace RPGCharacter
           Damage(damageDealt);
         }
     }
-    internal void Heal()
+    private void Heal()
     {
       if (this.health < 100 && this.inventory.Contains("Health_Potion"))
       {
@@ -56,12 +56,12 @@ namespace RPGCharacter
       }
       Console.WriteLine("You have healed yourself!");
     }
-    internal void Damage(int damageDealt){
+    private void Damage(int damageDealt){
       int monsterDamage = damageDealt*2;
       this.health = this.health - monsterDamage;
       Console.WriteLine($"The monster has attached you and dealt {monsterDamage} damage!");
     }
-    internal int ManaUsed(int damageDealt)
+    private int ManaUsed(int damageDealt)
     {
       if (damageDealt % 2 == 0)
       {
@@ -69,13 +69,13 @@ namespace RPGCharacter
       }
       return 3;
     }
-    internal int RandomNumberGenerator(int min, int max)
+    private int RandomNumberGenerator(int min, int max)
     {
       Random random = new Random();
       int randomNumber = random.Next(min, max);
       return randomNumber;
     }
-    internal void PlayerAttack(int damageDealt)
+    private void PlayerAttack(int damageDealt)
     {
       Console.WriteLine($"Your have attacked! Dealing {damageDealt} damage!");
       for (int i = 0; i < 5; i++)
