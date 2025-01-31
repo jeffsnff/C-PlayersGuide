@@ -4,9 +4,9 @@ namespace Vin_Fletchers_Arrows
 {
   internal class Arrow
   {
-    ArrowHead _arrowHead;
-    Fletching _fletching;
-    int _shaftLength;
+    private ArrowHead _arrowHead;
+    private Fletching _fletching;
+    private int _shaftLength;
 
 
     public Arrow(ArrowHead arrowHead, Fletching fletching, int shaftLength)

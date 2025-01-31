@@ -18,7 +18,7 @@ namespace Vin_Fletchers_Arrows{
     /// and ask the user what type of ArrowHead they want.
     /// </summary>
     /// <returns>Enum selection</returns>
-    public static ArrowHead GetArrowHead(){
+    private static ArrowHead GetArrowHead(){
       DisplayItems(Enum.GetNames(typeof(ArrowHead)), "Please enter an Arrowhead type.");
       return (ArrowHead)Convert.ToInt32(Console.ReadLine());
     }
@@ -27,7 +27,7 @@ namespace Vin_Fletchers_Arrows{
     /// and ask the user what type of fletching they want.
     /// </summary>
     /// <returns>Enum selection</returns>
-    public static Fletching GetFletching(){
+    private static Fletching GetFletching(){
       DisplayItems(Enum.GetNames(typeof(Fletching)), "Please enter a Fletching type.");
       return (Fletching)Convert.ToInt32(Console.ReadLine());
     }
@@ -36,7 +36,7 @@ namespace Vin_Fletchers_Arrows{
     /// If number is outside those bounds, repeats question
     /// </summary>
     /// <returns>Int value of shaft length between 60 and 100</returns>
-    public static int GetShaftLength(){
+    private static int GetShaftLength(){
       Console.WriteLine("Enter a length between 60 and 100 cm.");
       int shaftLength = Convert.ToInt32(Console.ReadLine());
       if(shaftLength<60 || shaftLength>100){
@@ -50,7 +50,7 @@ namespace Vin_Fletchers_Arrows{
     /// </summary>
     /// <param name="items">String Array</param>
     /// <param name="message">Message for the user</param>
-    public static void DisplayItems(string[] items, string message){
+    private static void DisplayItems(string[] items, string message){
       Console.WriteLine(message);
       for(int i = 0;  i<items.Length; i++){
         Console.WriteLine($"{i+1} - {items[i]}");
