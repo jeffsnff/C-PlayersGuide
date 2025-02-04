@@ -6,7 +6,7 @@ namespace Vin_Fletchers_Arrows
   {
     private ArrowHead _arrowHead;
     private Fletching _fletching;
-    private int _shaftLength;
+    private int _shaftLength { get; set; }
 
 
     public Arrow(ArrowHead arrowHead, Fletching fletching, int shaftLength)
