@@ -8,7 +8,6 @@ namespace Vin_Fletchers_Arrows
     private Fletching _fletching;
     private int _shaftLength { get; set; }
 
-
     public Arrow(ArrowHead arrowHead, Fletching fletching, int shaftLength)
     {
       _arrowHead = arrowHead;
@@ -55,4 +54,6 @@ namespace Vin_Fletchers_Arrows
 
   enum ArrowHead { Steel=1, Wood, Obsidian }
   enum Fletching { Plastic=1, TurkeyFeathers, GooseFeathers }
+
+  enum PreMade { Elite, Beginner, Marksman }
 }
