@@ -6,16 +6,7 @@ namespace MyApp
   {
     static void Main(string[] args)
     {
-      (People, int level, int score) player1;
+     
     }
   }
-  enum People { Jeff, Chad }
 }
-
-
-
-
-
-
-// (People, int level, int score) player1;
-// enum People {Jeff, Chad}
