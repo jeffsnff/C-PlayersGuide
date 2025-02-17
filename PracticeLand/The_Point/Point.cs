@@ -4,8 +4,8 @@ namespace The_Point
 {
   internal class Point
   {
-    private int _x;
-    private int _y;
+    private readonly int _x;
+    private readonly int _y;
 
     public Point(int x, int y)
     {
