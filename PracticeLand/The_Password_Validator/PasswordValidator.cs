@@ -4,7 +4,7 @@ namespace The_Password_Validator
 {
   internal class PasswordValidator
   {
-    private string password;
+    private readonly string password;
 
     public PasswordValidator(string password)
     {
