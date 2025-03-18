@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading;
 
 namespace PracticeLand
 {
@@ -51,8 +52,20 @@ namespace PracticeLand
         {
           Console.WriteLine(item);
         }
-        
+
       }
+    }
+
+    public void InventoryCount()
+    {
+      int count = 0;
+      foreach (InventoryItem item in this.inventory) {
+        if (item.ToString() != "")
+        {
+          count++;
+        }
+      }
+      Console.WriteLine($"Current item count is {count} with a max capacity of {this.inventory.Length}");
     }
 
     public override string ToString()

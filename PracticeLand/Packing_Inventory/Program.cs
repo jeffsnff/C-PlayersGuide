@@ -18,6 +18,7 @@ namespace PracticeLand
       Pack backpack = new Pack(maxWeight, maxVolume, inventorySize);
 
       Rope rope = new Rope();
+      Arrow arrow = new Arrow();
 
 
       while (true)
@@ -26,16 +27,52 @@ namespace PracticeLand
         switch (userAction)
         {
           case 1:
-            backpack.Add(rope);
+            int userInput = DisplayItems(Enum.GetNames(typeof(Items)), "What would you like to add?");
+            switch (userInput)
+            {
+              case 1:
+                AddItem(backpack, arrow);
+                break;
+              case 2:
+                Console.WriteLine("Bow");
+                Console.WriteLine("You added a Bow to your pack.");
+                Console.ReadKey();
+                break;
+              case 3:
+                AddItem(backpack, rope);
+                break;
+              case 4:
+                Console.WriteLine("Water");
+                Console.WriteLine("You added Water to your pack.");
+                Console.ReadKey();
+                break;
+              case 5:
+                Console.WriteLine("Food");
+                Console.WriteLine("You added Food to your pack.");
+                Console.ReadKey();
+                break;
+              case 6:
+                Console.WriteLine("Sword");
+                Console.WriteLine("You added a Sword to your pack.");
+                Console.ReadKey();
+                break;
+            }
             break;
           case 2:
             backpack.CurrentInventory();
+            Console.ReadKey();
             break;
           case 3:
             Console.WriteLine("Check Weight");
+            Console.ReadKey();
             break;
           case 4:
             Console.WriteLine("Check Volume");
+            Console.ReadKey();
+            break;
+          case 5:
+            backpack.InventoryCount();
+            Console.ReadLine();
             break;
           case 0:
             break;
@@ -51,8 +88,21 @@ namespace PracticeLand
         }
       }
     }
+
+    private static void AddItem(Pack backpack, InventoryItem item)
+    {
+      if (backpack.Add(item))
+      {
+        Console.WriteLine($"{item} was added to inventory");
+        Console.ReadKey();
+        return;
+      }
+      Console.WriteLine("Inventory is full!");
+      Console.ReadKey();
+    }
     private static int DisplayItems(string[] items, string message)
     {
+      Console.Clear();
       int userInput;
       while (true)
       {
@@ -73,7 +123,7 @@ namespace PracticeLand
           Console.ReadKey();
           continue;
         }
-        
+
         if (userInput > items.Length || userInput < 0)
         {
           Console.Clear();
@@ -86,5 +136,6 @@ namespace PracticeLand
       return userInput;
     }
   }
-  enum Actions {Add, CheckInventory, CheckWeight, CheckVolume}
+  enum Actions { Add, CheckInventory, CheckWeight, CheckVolume, CountInventory }
+  enum Items {Arrow, Bow, Rope, Water, Food, Sword}
 }
