@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Locked_door", "Practice
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Password_Validator", "PracticeLand\The_Password_Validator\The_Password_Validator.csproj", "{3E7BB2FE-3CE8-499F-92E0-2AD1BF39E48D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packing_Inventory", "PracticeLand\Packing_Inventory\Packing_Inventory.csproj", "{A79CCE8C-D167-467A-8DA7-579F8C7A06C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -118,6 +120,10 @@ Global
 		{3E7BB2FE-3CE8-499F-92E0-2AD1BF39E48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E7BB2FE-3CE8-499F-92E0-2AD1BF39E48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E7BB2FE-3CE8-499F-92E0-2AD1BF39E48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79CCE8C-D167-467A-8DA7-579F8C7A06C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79CCE8C-D167-467A-8DA7-579F8C7A06C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79CCE8C-D167-467A-8DA7-579F8C7A06C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79CCE8C-D167-467A-8DA7-579F8C7A06C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{34F1BFD6-C2C2-4C98-AD1D-BCCB031BB74C} = {9B85527F-246C-4E01-A0EA-2ED7D8D53059}
@@ -134,5 +140,6 @@ Global
 		{522C0F6E-936B-4F7F-A082-ECB594090E19} = {9B85527F-246C-4E01-A0EA-2ED7D8D53059}
 		{3AA45009-666B-4E6B-A63D-22475CAC9EDE} = {9B85527F-246C-4E01-A0EA-2ED7D8D53059}
 		{3E7BB2FE-3CE8-499F-92E0-2AD1BF39E48D} = {9B85527F-246C-4E01-A0EA-2ED7D8D53059}
+		{A79CCE8C-D167-467A-8DA7-579F8C7A06C2} = {9B85527F-246C-4E01-A0EA-2ED7D8D53059}
 	EndGlobalSection
 EndGlobal
