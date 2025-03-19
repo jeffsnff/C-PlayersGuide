@@ -26,6 +26,27 @@ namespace PracticeLand
     // bool Add method Ability to add to inventory if the item does not go over Packs max weight and max volume
     public bool Add(InventoryItem item)
     {
+      double currentWeight = 0;
+      double currentVolume = 0;
+      int currentCount = 0;
+      for (int i = 0; i < this.inventory.Length; i++)
+      {
+        currentWeight = currentWeight + this.inventory[i].weight;
+        currentVolume = currentVolume + this.inventory[i].volume;
+        if (this.inventory[i].weight != 0.0)
+        {
+          currentCount++;
+        }
+      }
+      if (currentWeight + item.weight > maxWeight)
+      {
+        return false;
+      }
+      if (currentVolume + item.volume > maxVolume)
+      {
+        return false;
+      }
+      
       for (int i = 0; i < inventory.Length; i++)
       {
         if (this.inventory[i].weight == 0.0)
