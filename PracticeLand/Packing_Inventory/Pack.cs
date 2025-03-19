@@ -36,36 +36,78 @@ namespace PracticeLand
       }
       return false;
     }
-
-    // Report current item count
-
-    // Report current volume
-
     // Report current weight
-
-    // Report current inventory
-    public void CurrentInventory()
+    public double[] CurrentWeight()
     {
+      double[] weightArray = new double[2];
+      double weight = 0.0;
       foreach (InventoryItem item in this.inventory)
       {
         if (item.ToString() != "")
         {
-          Console.WriteLine(item);
+          weight = weight + item.weight;
         }
-
       }
+      weightArray[0] = weight;
+      weightArray[1] = maxWeight;
+      return weightArray;
     }
 
-    public void InventoryCount()
+    // Report current volume
+    public double[] CurrentVolume()
+    {
+      double[] volumeArray = new double[2];
+      double volume = 0.0;
+      foreach (InventoryItem item in this.inventory)
+      {
+        if (item.ToString() != "")
+        {
+          volume = volume + item.volume;
+        }
+      }
+      // Console.WriteLine($"Current volume is {volume} out of {maxVolume}");
+      volumeArray[0] = volume;
+      volumeArray[1] = maxVolume;
+      return volumeArray;
+    }
+    // Report current inventory
+    public string[] CurrentInventory()
     {
       int count = 0;
-      foreach (InventoryItem item in this.inventory) {
+      // Sets count to number that has actual item in this.inventory
+      foreach (InventoryItem item in this.inventory)
+      {
         if (item.ToString() != "")
         {
           count++;
         }
       }
-      Console.WriteLine($"Current item count is {count} with a max capacity of {this.inventory.Length}");
+
+      string[] items = new string[count];
+      for (int i = 0; i < items.Count(); i++)
+      {
+        if (this.inventory[i].ToString() != "")
+        {
+          items[i] = this.inventory[i].ToString();
+        }
+      }
+      return items;
+    }
+    // Report current item count
+    public double[] CurrentInventoryCount()
+    {
+      double[] countArray = new double[2];
+      int count = 0;
+      foreach (InventoryItem item in this.inventory)
+      {
+        if (item.ToString() != "")
+        {
+          count++;
+        }
+      }
+      countArray[0] = count;
+      countArray[1] = this.inventory.Length;
+      return countArray;
     }
 
     public override string ToString()

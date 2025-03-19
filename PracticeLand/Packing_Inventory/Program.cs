@@ -19,6 +19,10 @@ namespace PracticeLand
 
       Rope rope = new Rope();
       Arrow arrow = new Arrow();
+      Bow bow = new Bow();
+      Water water = new Water();
+      Food food = new Food();
+      Sword sword = new Sword();
 
 
       while (true)
@@ -34,45 +38,38 @@ namespace PracticeLand
                 AddItem(backpack, arrow);
                 break;
               case 2:
-                Console.WriteLine("Bow");
-                Console.WriteLine("You added a Bow to your pack.");
-                Console.ReadKey();
+                AddItem(backpack, bow);
                 break;
               case 3:
                 AddItem(backpack, rope);
                 break;
               case 4:
-                Console.WriteLine("Water");
-                Console.WriteLine("You added Water to your pack.");
-                Console.ReadKey();
+                AddItem(backpack, water);
                 break;
               case 5:
-                Console.WriteLine("Food");
-                Console.WriteLine("You added Food to your pack.");
-                Console.ReadKey();
+                AddItem(backpack, food);
                 break;
               case 6:
-                Console.WriteLine("Sword");
-                Console.WriteLine("You added a Sword to your pack.");
-                Console.ReadKey();
+                AddItem(backpack, sword);
                 break;
             }
             break;
           case 2:
-            backpack.CurrentInventory();
-            Console.ReadKey();
+            // backpack.CurrentInventory();
+            PrintPackInventory(backpack.CurrentInventory(), "Current Inventory is:");
             break;
           case 3:
-            Console.WriteLine("Check Weight");
-            Console.ReadKey();
+            PackInfo(backpack.CurrentWeight(), "Current weight");
             break;
           case 4:
-            Console.WriteLine("Check Volume");
-            Console.ReadKey();
+            PackInfo(backpack.CurrentVolume(), "Current volume");
             break;
           case 5:
-            backpack.InventoryCount();
-            Console.ReadLine();
+            PackInfo(backpack.CurrentInventoryCount(), "Current Inventory Count");
+            break;
+          case 6:
+            Console.WriteLine(backpack);
+            Console.ReadKey();
             break;
           case 0:
             break;
@@ -89,6 +86,20 @@ namespace PracticeLand
       }
     }
 
+    private static void PackInfo(double[] data, string message)
+    {
+      Console.WriteLine($"{message} is {data[0]} out of {data[1]}.");
+      Console.ReadKey();
+    }
+    private static void PrintPackInventory(string[] inventory, string message)
+    {
+      Console.WriteLine(message);
+      foreach (string item in inventory)
+      {
+        Console.WriteLine(item);
+      }
+      Console.ReadKey();
+    }
     private static void AddItem(Pack backpack, InventoryItem item)
     {
       if (backpack.Add(item))
@@ -136,6 +147,6 @@ namespace PracticeLand
       return userInput;
     }
   }
-  enum Actions { Add, CheckInventory, CheckWeight, CheckVolume, CountInventory }
+  enum Actions { Add, Check_Inventory, Check_Weight, Check_Volume, Count_Inventory, Pack_Information }
   enum Items {Arrow, Bow, Rope, Water, Food, Sword}
 }
