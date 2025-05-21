@@ -13,7 +13,7 @@ namespace The_Old_Robot
       for (int i = 0; i < robot.Commands.Length; i++)
       {
         string? input = Console.ReadLine();
-        RobotCommand? command = input switch
+        IRobotCommand? command = input switch
         {
           "on" => new OnCommand(),
           "off" => new OffCommand(),

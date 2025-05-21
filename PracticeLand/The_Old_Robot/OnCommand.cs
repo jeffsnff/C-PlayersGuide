@@ -2,9 +2,9 @@ using System;
 
 namespace The_Old_Robot
 {
-  public class OnCommand : RobotCommand
+  public class OnCommand : IRobotCommand
   {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
       robot.IsPowered = true;
     }
